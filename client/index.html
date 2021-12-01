@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body class="container">
+    
+    <header>
+      <a href="home.html" class="brand">Adventurous Traveller</a>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="home.html">Home</a>
+          <a href="index.html">Create List</a>
+          <a href="login.html">Login</a>
+          <a href="imageGallery.html">Gallery</a>
+          <a href="contactUs.html">Contact</a>
+        </div>
+      </div>
+    </header>
+  
+</aside>  
+    <main>
+      <aside>
+        <div>
+          <button id="complimentButton">Get a Suggestion</button>
+        </div>
+              
+      <form>
+        
+        
+          <label for="nameInput">City Name:</label>
+          <input type='text' id="nameInput"/>
+          <label for="countrySelect">Country:</label>
+          <select id="countrySelect"></select>
+
+          <input 
+              type='text'
+              id="currentCity"
+              placeholder='Where are you from?'/>
+          <input 
+              type='text'
+              id="age"
+              placeholder='At what age you would like to go?'/>
+
+          
+          
+          <label for="life">With whom you would like to go?</label>
+          <select name="life" id="life">
+            <option value="Family">Family</option>
+            <option value="Cousins">Cousins</option>
+            <option value="Friends">Friends</option>
+            <option value="Wife">Wife</option>
+            <option value="Kids">Kids</option>
+          </select>
+          
+          <button id="wishList">Add to wish list!</button>
+      </form>
+      <section id="futures-container"></section>
+      <section id="country-list"></section>
+  
+    </aside>   
+      </main>
+  
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+     <script>
+      document.getElementById("complimentButton").onclick = function () {
+        axios.get("http://localhost:5555/api/compliment/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+
+      
+    </script>
+    <script src="index.js"></script>
+    
+  </body>
+</html>

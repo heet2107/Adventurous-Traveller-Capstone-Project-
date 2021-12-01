@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(bg4.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+header{
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 200px;
+  transition: 0.5s ease;
+}
+
+header .brand{
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: left;
+  margin-right: 530px;
+}
+
+header .navigation{
+  position: relative;
+}
+
+header .navigation .navigation-items a{
+  position: relative;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before{
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before{
+  width: 100%;
+}
+
+header {
+  height: 80px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  color: darkslategray;
+}
+
+label {
+    color: aliceblue;
+}
+main {
+  display: flex; 
+  margin-top: 200px;
+}
+
+aside {
+  margin: 20px;
+  align-content: center;
+}
+
+
+form {
+  align-content: center;
+  width: 400px;
+  height: 350px;
+  background-color: rgba(151, 151, 189, 0.335);
+  position: relative;
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;
+  margin: 30px;
+  margin-top: 20px;
+  border-top-left-radius: 55px;
+  border-top-right-radius: 55px;
+  border-bottom-left-radius: 55px;
+  border-bottom-right-radius: 55px;
+}
+
+button {
+    align-self: center;
+    background-color: #232323;
+    width: 175px;
+    height: 25px;
+    color: rgb(64, 224, 104);
+    border-radius: 10px;
+    margin: 5px;
+}
+  
+input[type='text'] {
+  width: 85%;
+  height: 30px;
+  border-radius: 10px;
+  border-bottom: 2px solid #232323;
+  color: #232323;
+  background-color: snow;
+  padding-left: 10px;
+}
+
+#Age-container {
+  width: 85%;
+}
+
+
+#futures-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.future-card {
+  background-color:antiquewhite;
+  padding: 10px;
+  width: 400px;
+  height: 350px;
+  margin: 20px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  border-top-left-radius: 55px;
+  border-top-right-radius: 55px;
+}
+
+.future-Goal {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.future-Age {
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+.btns-container {
+  width: 100%; 
+  display: flex;
+  justify-content: space-evenly;
+  margin: 15px;
+}
+
+.btns-container > button {
+  width: 100%;
+}
+
+.country-card {
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+
+.country-card > h2 {
+  margin-bottom: 10px;
+}
+
+.country-card > button {
+  margin-top: 10px;
+  padding: 2px 10px;
+}

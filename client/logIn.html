@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login and Registration Form</title>
+    <link rel="stylesheet" href="loginStyle.css">
+</head>
+<body>
+    <header>
+      <a href="home.html" class="brand">Adventurous Traveller</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="home.html">Home</a>
+          <a href="index.html">Create List</a>
+          <a href="login.html">Login</a>
+          <a href="imageGallery.html">Gallery</a>
+          <a href="contactUs.html">Contact</a>
+        </div>
+      </div>
+      </header>
+
+    <div class="wrapper">
+
+       <div class="title-text">
+          
+            <h1 class="title login">Login Form</h1>
+            <h1 class="title register">Registration Form</h1>
+
+       </div>
+
+       <div class="form-container">
+
+          <div class="slide-controls">
+             <input type="radio" name="slide" id="login" checked>
+             <input type="radio" name="slide" id="register">
+             <label for="login" class="slide login">Login</label>
+             <label for="register" class="slide register">Register</label>
+             <div class="slider-tab"></div>
+          </div>
+
+          <div class="form-inner">
+
+             <form action="#" class="login">
+                <input class="field" type="text" id="username" placeholder="User Name" required>
+                <input class="field" type="password" id="password" placeholder="Password" required>
+                <p class="pass-link"><a href="#">Forgot password?</a></p>
+                
+
+                <div class="field btn">
+                   <div class="btn-layer"></div>
+                   <input type="submit" onClick="login()" value="Login">
+                </div>
+
+                <p class="register-link">Don't have an account? <a href="">Register now</a></p>
+                
+             </form>
+
+             <form action="#" class="register">
+                    <input class="field" type="text" id="fullName" placeholder="Full Name" required>
+                    <input class="field" type="text" id="emailId" placeholder="Email Address" required>
+                    <input class="field" type="text" id="newUsername" placeholder="User Name" required>
+                    <input class="field" type="password" id="newPassword" placeholder="Password" required>
+
+
+                <div class="field btn">
+                   <div class="btn-layer"></div>
+                   <input type="submit" onClick="register()" value="Register">
+                </div>
+
+        
+                <p class="login-link">Already registered? <a href="">Login</a></p>
+        
+                 
+             </form>
+
+          </div>
+       </div>
+    </div>
+
+
+    <script>
+       const loginText = document.querySelector(".title-text .login");
+       const loginForm = document.querySelector("form.login");
+       const loginBtn = document.querySelector("label.login");
+       const registerBtn = document.querySelector("label.register");
+       const registerLink = document.querySelector("form .register-link a");
+       const loginLink = document.querySelector("form .login-link a");
+       registerBtn.onclick = (()=>{
+         loginForm.style.marginLeft = "-50%";
+         loginText.style.marginLeft = "-50%";
+       });
+       loginBtn.onclick = (()=>{
+         loginForm.style.marginLeft = "0%";
+         loginText.style.marginLeft = "0%";
+       });
+       registerLink.onclick = (()=>{
+        registerBtn.click();
+         return false;
+       });
+       loginLink.onclick = (()=>{
+         loginBtn.click();
+         return false;
+       });
+    </script>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="login.js"></script>
+ </body>
+</html>

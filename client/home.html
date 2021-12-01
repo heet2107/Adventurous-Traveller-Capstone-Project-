@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="homeStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="home.html" class="brand">Adventurous Traveller</a>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="home.html">Home</a>
+          <a href="index.html">Create List</a>
+          <a href="login.html">Login</a>
+          <a href="imageGallery.html">Gallery</a>
+          <a href="contactUs.html">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="homev1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="homev2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="homev3.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="homev4.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="homev5.mp4" autoplay muted loop></video>
+
+      <div class="content active">
+        <h1>National Park.<br><span>Adventures</span></h1>
+        <p>Planning on visiting a United States National Park this year? Not sure how to decide? Well, this list is for you then! The USA has 60 National Parks, all of which will blow you away. Each National Park is unique in their own way and is filled with mountains, sand dunes, beaches, lakes, volcanoes, deserts, canyons, waterfalls, caves, and much more. Whatever type of outdoor experience you prefer, the United States National Parks provide experiences of all kinds. So sit back, relax, and read on to find out which National Parks are the favorites of fellow Travel Bloggers.</p>
+        <a href="#">Read More</a>
+      </div>
+
+      <div class="content">
+        <h1>Trees N Tents.<br><span>Camping</span></h1>
+        <p>While car camping and backpacking are entirely different outdoor activities, they have one thing in common; in both instances, you’ll need a tent. Your tent selection will say much about the type of trip you’re planning, and will dictate whether or not you’ll have a resoundingly positive experience. So, whether you intend on setting up at a campground for some r&r or if you’re feeling more ambitious by strapping on a loaded backpack, this article will help you find which shelter works best for you!
+
+            <br>Let’s begin with the different types of tents for the different seasons of the year.</p>
+        <a href="#">Read More</a>
+      </div>
+
+      <div class="content">
+        <h1>Road Trips.<br><span>Adventures</span></h1>
+        <p>This road trip through the northeast winds along pastoral valleys and ancient mountains connecting three dynamic cities–New York, Boston and Montreal–while passing through quaint country retreats and revived Rust Belt towns. The landscapes are perhaps more varied than anywhere in the country: Cape Cod’s broad beaches, the rugged seascapes of Acadia, powerful Niagara Falls–joined together by endless hardwood forests that come alive with fall colors. There are also plenty of chances to sample regional food at roadside pancake houses, soft-serve ice cream stands, lobster pounds, and seafood shacks.</p>
+        <a href="#">Read More</a>
+      </div>
+      
+      <div class="content">
+        <h1>Beach and Mountains.<br><span>Explore the Nature</span></h1>
+        <p>Mountain and beach destinations offer the perfect mix of activity and relaxation. Sometimes, you don’t want to choose and these destinations offer you the best of both worlds. Crystal waters, backed by dramatic mountain ranges make the perfect backdrop for an unforgettable trip. If you like hiking but want the option of relaxing on the beach too, these mountain and beach destinations are perfect for your next trip!</p>
+        <a href="#">Read More</a>
+      </div>
+
+      <div class="content">
+        <h1>Breathe Dream Go<br><span>Feel Nature.</span></h1>
+        <p>In our pursuit of health and happiness, we tend to focus so much on the material goals and taking a daily multivitamin, that we completely forget about Mother Nature how much the modern lifestyle has distanced us from our roots. Yes, you can have an amazing life chasing after material goals or simply by eating healthy and exercising regularly, but if you want to take your well-being to the next level and commit to healthy living, then you need to find a way to reconnect with Earth.
+            <br>Let’s talk more about this exciting journey and how you can have yourself an outdoor adventure of a lifetime.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      
+
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      //Javacript for responsive navigation menu
+      const navigation = document.querySelector(".navigation");
+  
+      //Javacript for video slider navigation
+      const btns = document.querySelectorAll(".nav-btn");
+      const slides = document.querySelectorAll(".video-slide");
+      const contents = document.querySelectorAll(".content");
+  
+      var sliderNav = function(manual){
+        btns.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+  
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+  
+        contents.forEach((content) => {
+          content.classList.remove("active");
+        });
+  
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+      }
+  
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          sliderNav(i);
+        });
+      });
+      </script>
+
+  </body>
+</html>

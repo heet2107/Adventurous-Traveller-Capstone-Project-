@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contactUs.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <header>
+        <a href="home.html" class="brand">Adventurous Traveller</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+          <div class="navigation-items">
+            <a href="home.html">Home</a>
+            <a href="index.html">Create List</a>
+            <a href="login.html">Login</a>
+            <a href="imageGallery.html">Gallery</a>
+            <a href="contactUs.html">Contact</a>
+          </div>
+        </div>
+      </header>
+    <!-- <h2>Contact Form</h2> -->
+
+    <div class="container">
+    <form >
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name...">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+
+        <label for="place">City, State, Country</label>
+        <input type="text" id="placeName" name="placeName" placeholder="Your city, state and country...">
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+
+        <input type="submit" class="Submit" onclick="clicked();" value="Submit" />
+        
+
+
+    </form>
+    </div>
+    <script>
+      function clicked() {
+        alert('Your form has been submited successfuly! We will get back to you shortly.');
+      }
+
+      
+    </script>
+</body>
+</html>
